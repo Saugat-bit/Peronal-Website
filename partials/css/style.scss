@@ -1,0 +1,492 @@
+$pcolor: #ffbb00;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .hero {
+        width: 100%;
+        display: flex;
+        height: 500px;
+        align-items: center;
+
+        .left {
+            width: 50%;
+
+            .name {
+                font-size: 60px;
+            }
+
+            .tagline {
+                color: #373737;
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 14px;
+                width: 300px;
+                margin-bottom: 30px;
+            }
+
+            .explore-btn {
+                background-color: $pcolor;
+                border: 2px solid $pcolor;
+                border-radius: 5px;
+                padding: 10px 30px;
+                text-decoration: none;
+                color: #000;
+            }
+
+            .explore-btn:hover {
+                background-color: #ffbb003b;
+                border: 2px solid $pcolor;
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 400px;
+                // object-fit: cover;
+            }
+        }
+    }
+
+}
+
+// Media Queries for hero section 
+
+@media (max-width: 814px) {
+    .container {
+        .hero {
+            .left {
+                .name {
+                    font-size: 50px;
+                }
+
+                .tagline {
+                    font-size: 40px;
+                }
+            }
+
+            .right {
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .container {
+        .hero {
+            flex-direction: column-reverse;
+            height: auto;
+
+            .left {
+                width: 100%;
+
+                .name {
+                    font-size: 30px;
+                }
+
+                .tagline {
+                    font-size: 20px;
+                }
+
+                p {
+                    width: 100%;
+                }
+
+                .explore-btn {
+                    padding: 5px 15px;
+                }
+            }
+
+            .right {
+                width: 100%;
+
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries for hero section ends here
+
+
+// About Section Start 
+.container {
+    .about {
+        margin: 100px 0;
+        width: 100%;
+        display: flex;
+        gap: 30px;
+
+        .left {
+            width: 50%;
+
+            img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+            }
+        }
+
+        .right {
+            width: 50%;
+            // align-self: center;
+
+            .heading {
+                font-size: 30px;
+            }
+
+            .description {
+                margin-top: 10px;
+                line-height: 25px;
+                letter-spacing: 2px;
+                word-spacing: 4px;
+                text-align: justify;
+            }
+
+            .greetings {
+                margin-top: 30px;
+                padding: 10px 20px;
+                border: 1px solid $pcolor;
+                background-color: #ffbb003b;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+// Media Queries for about section
+@media (max-width: 900px) {
+    .container {
+        .about {
+            flex-direction: column-reverse;
+
+            .left {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 300px;
+                    width: 300px;
+                }
+            }
+
+            .right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .container {
+        .about {
+            .left {
+                img {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+
+            .right {
+                .description {
+                    letter-spacing: 0;
+                    word-spacing: 0;
+                }
+
+                .greetings {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// Family Section Start
+.container {
+    .family-heading {
+        border-bottom: 3px solid $pcolor;
+        // padding-bottom: 10px;
+    }
+
+    .family {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 50px;
+
+        .card {
+            width: 300px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 10px;
+            border: 1px solid #0003;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #0003;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 1px solid #0003;
+                box-shadow: 3px 3px 10px #0003;
+                object-fit: cover;
+            }
+
+            .name {
+                margin-top: 10px;
+            }
+
+        }
+    }
+}
+
+// education start
+.container {
+
+    ul,
+    li {
+        list-style: none;
+        padding: 0;
+    }
+
+    .education {
+        border-radius: 15px;
+        margin-top: 30px;
+    }
+
+    .sub-heading-education {
+        font-size: 20px;
+        font-family: sans-serif;
+    }
+
+    .timeline {
+        margin-top: 30px;
+        position: relative;
+    }
+
+    li {
+        padding-bottom: 40px;
+        border-left: 1px solid $pcolor;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 10px;
+
+        &:last-child {
+            border: 0px;
+            padding-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: white;
+            border: 1px solid $pcolor;
+            box-shadow: 3px 3px 0px $pcolor;
+            box-shadow: 3px 3px 0px $pcolor;
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            top: 0px;
+        }
+    }
+
+    .time {
+        color: #2a2839;
+        font-weight: 500;
+
+    }
+
+    p {
+        color: #4f4f4f;
+        margin-top: 10px;
+    }
+}
+
+
+// Hobbies Start Here
+.container {
+    .hobbies {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+
+        .card {
+            // display: flex;
+            width: 300px;
+            border: 1px solid #0003;
+            // background-color: #f1ecde;
+            padding: 10px 15px;
+            border-radius: 5px;
+
+            .icon {
+                i {
+                    font-size: 30px;
+                    color: #0e6fe1;
+                }
+            }
+
+            .description {
+                margin-top: 10px;
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            transition: all .3s ease-in-out;
+            user-select: none;
+            background-color: $pcolor;
+        }
+    }
+}
+
+// Media Queries For Hobbies
+@media (max-width: 650px) {
+    .container {
+        .hobbies {
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Contact Me Start
+.container {
+    .contact {
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        margin-top: 70px;
+
+        .map-area {
+            width: 50%;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .form-area {
+            width: 50%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input,
+                textarea {
+                    padding: 10px;
+                    font-size: 17px;
+                    outline: none;
+                    margin: 10px 0;
+                    border: 1px solid #0003;
+                    border-radius: 5px;
+                    resize: none;
+                }
+                textarea{
+                    height: 150px;
+                }
+                button{
+                    border: none;
+                    font-size: 18px;
+                    background-color: $pcolor;
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-top: 10px;
+                }
+                button:hover{
+                    background-color: #dba204;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries For Contact Section 
+@media (max-width: 650px) {
+    .container{
+        .contact{
+            flex-direction: column-reverse;
+
+            .map-area,
+            .form-area{
+                width: 100%;
+            }
+            .map-area{
+                iframe{
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+// Reference Page start 
+.container{
+    .references{
+        .heading{
+            font-size: 40px;
+        }
+
+        .cards{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 30px;
+
+            .card{
+                padding: 10px 10px 20px 10px;
+                border: 1px solid #0003;
+                border-radius: 5px;
+                border-top: 3px solid $pcolor;
+                box-shadow: 3px 3px 10px #0001;
+
+                .desc{
+                    margin-bottom: 10px;
+                }
+                .button{
+                    text-decoration: none;
+                    background-color: $pcolor;
+                    padding: 5px 10px;
+                    border-radius: 3px;
+                    color: #000;
+                }
+                .button:hover{
+                    background-color: #dba204;
+                }
+            }
+        }
+    }
+}
